@@ -1,0 +1,30 @@
+extends ../layouts/mainLayout.pug
+block content
+	- let flag=false
+	each kq in val
+		-flag=!flag
+		hr.featurette-divider
+		.row.featurette
+			.col-md-7(class=(flag? "":"order-md-2"))
+				h2.featurette-heading.text-dark
+					| #{kq.title}
+				.titleInfor.border-bottom.mb-3
+					ul.nav
+						li.nav-item
+							a.nav-link.active(aria-current='page', href='#')
+								i.fas.fa-user-tie.me-1
+								| #{kq.user[0].fullName}
+						li.nav-item
+							p.nav-link
+								i.fas.fa-clock.me-1
+								span.date #{moment(kq.created).format("YYYY-MM-DD HH:mm:ss")}
+						li.nav-item
+							a.nav-link(href='#')
+								i.fas.fa-comments.me-1
+								span.commentSum.mx-1 #{kq.comments.length} 
+								| comments
+				.contentPost
+					| !{kq.content} 
+				a(href="/posts/detail/"+kq._id) More Read	
+			.col-md-5(class=(flag? "":"order-md-1"))
+				img(src='/img/contents/thumbnails/'+kq.thumbnail, style="width:300px;height:300px", alt='thumbnail')

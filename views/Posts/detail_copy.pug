@@ -1,0 +1,100 @@
+extends ../layouts/mainLayout.pug
+block content
+	hr.featurette-divider
+	.row.featurette
+		.col
+			h2.featurette-heading.text-dark
+				| #{kq[0].title}
+			.titleInfor.border-bottom.mb-3
+				ul.nav
+					li.nav-item
+						a.nav-link.active(aria-current='page', href='#')
+							i.fas.fa-user-tie.me-1
+							| #{kq[0].postUserInfor[0].fullName}
+					li.nav-item
+						p.nav-link
+							i.fas.fa-clock.me-1
+							| #{kq[0].postCategory[0].article}
+					li.nav-item
+						p.nav-link
+							i.fas.fa-clock.me-1
+							span.date #{moment(kq[0].created).format("YYYY-MM-DD HH:mm:ss")}
+					li.nav-item
+						a.nav-link(href='#')
+							i.fas.fa-comments.me-1
+								span.commentSum.mx-1 #{kq[0].commentList.length} 
+								| comments
+			.contentPostDetail
+				| !{kq[0].content}
+	//- Start the part of comments			
+	hr.featurette-divider
+	.row.featurette
+		.col.commentList
+			h2.featurette-heading.text-dark 
+				span.commentSum.mx-1 #{kq[0].commentList.length}
+				| Comments:
+			- let com=kq[0].commentList;		
+			- for (var i=0; i<com.length; i++)
+				.d-flex.border.my-3.p-3
+					.avatar.me-4(style="width:100px")
+						img.rounded-circle.m-auto(src='/img/avatars/'+com[i].commentUserInfor[0].avatar, style="width:30px", alt='avatar')
+						p=com[i].commentUserInfor[0].fullName
+					.comment
+						p !{com[i].content}
+						ul.nav
+							li.nav-item
+								p.nav-link
+									i.fas.fa-clock.me-1 
+									span.date #{moment(com[i].created).fromNow()}
+							li.nav-item
+								a.nav-link(href='#')
+									i.fas.fa-thumbs-up.me-1
+									| like
+							li.nav-item
+								a.commentReply.nav-link(href='#')
+									i.fas.fa-comments.me-1
+									| reply
+						.d-flex.detailReply.d-none
+							.avatar.me-1(style="width:40px")
+								img.rounded-circle.m-auto(src='/img/avatars/'+session.avatar, style="width:30px", alt='avatar')
+							.input-group.mb-3
+								input.form-control(type='text', name="content", placeholder="Add a reply here!")
+								button#buttonSend.btn.btn-outline-secondary.me-3(type='button', alt=session._id+'.'+com[i].posts_id+'.'+com[i].path) Send
+								button#buttonCancel.btn.btn-outline-secondary(type='button') Cancel			
+						- let j=i+1; //- check next comments			
+						while com[j] && com[j].path.includes('.')
+							.d-flex.border.my-3.p-3
+								.avatar.me-4(style="width:100px")
+									img.rounded-circle.m-auto(src='/img/avatars/'+com[j].commentUserInfor[0].avatar, style="width:30px", alt='avatar')
+									p=com[j].commentUserInfor[0].fullName
+								.comment
+									p !{com[j].content}
+									ul.nav
+										li.nav-item
+											p.nav-link
+												i.fas.fa-clock.me-1 
+												span.date #{moment(com[j].created).fromNow()}
+										li.nav-item
+											a.nav-link(href='#')
+												i.fas.fa-thumbs-up.me-1
+												| like
+										li.nav-item
+											a.commentReply.nav-link(href='#')
+												i.fas.fa-comments.me-1
+												| reply
+							- i=j
+							- j++
+//- write a comment 
+	hr.featurette-divider
+	.row.featurette
+		.col
+			form#comment(action=`/posts/comment/userId/${session._id}/postId/${kq[0]._id}`, method='post',enctype="multipart/form-data")
+				.row
+					label.col-sm-2.col-form-label(for='content') Contents of Comment
+					.col-sm-10
+						textarea#editor(name="content") write content
+				.row.my-4
+					.col-4.d-flex.justify-content-center.m-auto
+						button.btn.btn-primary(type='submit') Submit
+						a.btn.btn-warning.ms-3(href='/') Cancel
+				

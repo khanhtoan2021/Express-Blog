@@ -1,0 +1,76 @@
+[{
+  "_id": {
+    "$oid": "617e222c4a8596cfd4663058"
+  },
+  "content": "<p>co: bai viet rat hay</p>",
+  "posts_id": {
+    "$oid": "617e0e073c4b6bd113ae825f"
+  },
+  "users_id": {
+    "$oid": "617d557b4cf0b0d64b7fb695"
+  },
+  "path": "0",
+  "created": {
+    "$date": "2021-10-31T04:57:16Z"
+  }
+},{
+  "_id": {
+    "$oid": "617e229e4a8596cfd4663060"
+  },
+  "content": "<p>cc: tuyet voi</p>",
+  "posts_id": {
+    "$oid": "617e0ee93c4b6bd113ae8266"
+  },
+  "users_id": {
+    "$oid": "617d557b4cf0b0d64b7fb695"
+  },
+  "path": "0.1",
+  "created": {
+    "$date": "2021-10-31T04:59:10Z"
+  }
+},{
+  "_id": {
+    "$oid": "617e22b94a8596cfd4663064"
+  },
+  "content": "<p>xin chao ngay moi</p>",
+  "posts_id": {
+    "$oid": "617e0ff13c4b6bd113ae8274"
+  },
+  "users_id": {
+    "$oid": "617d557b4cf0b0d64b7fb695"
+  },
+  "path": "1",
+  "created": {
+    "$date": "2021-10-31T04:59:37Z"
+  }
+},{
+  "_id": {
+    "$oid": "617e22d74a8596cfd4663068"
+  },
+  "content": "<p>cc; noi dung chua ro</p>",
+  "posts_id": {
+    "$oid": "617e0e073c4b6bd113ae825f"
+  },
+  "users_id": {
+    "$oid": "617d557b4cf0b0d64b7fb695"
+  },
+  "path": "0.2",
+  "created": {
+    "$date": "2021-10-31T05:00:07Z"
+  }
+},{
+  "_id": {
+    "$oid": "617e230c4a8596cfd4663070"
+  },
+  "content": "<p>xin chao toan, tien day</p>",
+  "posts_id": {
+    "$oid": "617e0e073c4b6bd113ae825f"
+  },
+  "users_id": {
+    "$oid": "617d56d98f65798084c4dddd"
+  },
+  "path": "100",
+  "created": {
+    "$date": "2021-10-31T05:01:00Z"
+  }
+}]

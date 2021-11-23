@@ -1,0 +1,57 @@
+[{
+  "_id": {
+    "$oid": "617d557b4cf0b0d64b7fb695"
+  },
+  "fullName": "Le Khanh Toan",
+  "email": "ktoan86@yahoo.com",
+  "password": "$2b$10$jodJpn0tKyyHOBxRNjVfVu9laFJhafjBOApQ2zsvnp0KPa/gB.eYe",
+  "age": 35,
+  "phone": "7878798",
+  "gender": "Nam",
+  "avatar": "1635603834820_hinh3.png",
+  "created": {
+    "$date": "2021-10-30T14:23:54Z"
+  }
+},{
+  "_id": {
+    "$oid": "617d56574cf0b0d64b7fb6a1"
+  },
+  "fullName": "Nguyen Van Tien",
+  "email": "tien@gmail.com",
+  "password": "$2b$10$pPc2iw/9BhEs.iHpz.6IEuDdve/l7TMRSOinZ9ejf.C2MQPnlah7a",
+  "age": 44,
+  "phone": "7878798",
+  "gender": "Nam",
+  "avatar": "1635604055625_hinh4.png",
+  "created": {
+    "$date": "2021-10-30T14:27:35Z"
+  }
+},{
+  "_id": {
+    "$oid": "617d569a4cf0b0d64b7fb6a6"
+  },
+  "fullName": "Nguyen Thi Hong",
+  "email": "hong123@yahoo.com",
+  "password": "$2b$10$W3GOCpPG2X4Nv/opQuoWSeodoUTkyNt6/zEbd7D4QBAi0puMJuimu",
+  "age": 22,
+  "phone": "7878798",
+  "gender": "Nữ",
+  "avatar": "1635604122882_hinh2.png",
+  "created": {
+    "$date": "2021-10-30T14:28:42Z"
+  }
+},{
+  "_id": {
+    "$oid": "617d56d98f65798084c4dddd"
+  },
+  "fullName": "Tran Van Huong",
+  "email": "huong@gmail.com",
+  "password": "$2b$10$K4kRj7UkIS2fdFr1lsbVsOylKryHTg6v26KUyI3w8Z1gtCnWphAwW",
+  "age": 33,
+  "phone": "7878798",
+  "gender": "Nữ",
+  "avatar": "1635604185788_avata.png",
+  "created": {
+    "$date": "2021-10-30T14:29:45Z"
+  }
+}]

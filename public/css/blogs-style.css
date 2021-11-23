@@ -1,0 +1,35 @@
+/*Reset css*/
+ul,li{margin:0px;}
+li{list-style: none;}
+a{text-decoration: none;}
+h1{
+	font-weight: 400;
+	font-size: calc(1.375rem + 1.5vw);
+	margin-bottom: .625rem;
+	font-family: inherit;
+	line-height: 1.3;
+	color: #222;
+}
+body {
+    color: #566787;
+    background: #f5f5f5;
+    font-family: 'Varela Round',sans-serif;
+    font-size: 13px;
+}
+main #myCarousel .carousel-inner .carousel-item{
+	height: 350px;
+}
+.leftContent .ck.ck-editor__main>.ck-editor__editable{
+	min-height: 300px;
+}
+.leftContent .contentPost{
+	height: 60px;
+	margin-bottom: 20px;
+	display: -webkit-box;
+	-webkit-line-clamp: 3;
+	-webkit-box-orient: vertical;
+	overflow: hidden;
+}
+.leftContent .contentPostDetail{
+	overflow: hidden;
+}

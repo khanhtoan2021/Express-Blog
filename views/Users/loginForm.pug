@@ -1,0 +1,22 @@
+extends ../layouts/mainLayout.pug
+block content
+	.card-body.border.w-50.my-3.m-auto
+		.d-flex.justify-content-center
+			img.rounded-circle.m-auto(src='/img/avatars/1634459023804_hinh4.png', alt='avatar')
+		if errors
+			.alert.alert-danger(role="alert") #{errors.msg}	
+		form.loginForm(action='/users/login', method='post')
+			.form-group
+				label Your Email
+				input.form-control.my-1(type='text' name='email' value=(kq? kq.email:"") required='required') 
+			.form-group
+				label Password
+				input.form-control.my-1(type='password', name='password', required='required')
+			.form-group.text-center.my-3
+				button.btn.btn-block.btn-success.w-50(type='submit') Login
+			.form-check
+				input#autoSizingCheck.form-check-input(type='checkbox')
+				label.form-check-label(for='autoSizingCheck') Remember me
+			a#createAccount(href='JavaScript:void(0);') Create an Account
+
+

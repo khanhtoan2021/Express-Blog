@@ -1,0 +1,38 @@
+extends ../layouts/mainLayout.pug
+block content
+	.card-body.border.w-50.my-3.m-auto
+		if errors
+			.alert.alert-danger(role="alert") #{errors.msg}	
+		form.addForm(action='/users/register', method='post',enctype="multipart/form-data")
+			.form-group
+				label Full Name
+				input.form-control.my-1(type='text', name='fullName', value=(kq? kq.fullName:"")  required='required')
+			.form-group
+				label Your Email
+				input.form-control.my-1(type='text', name='email',value=(kq? kq.email:"")  required='required')
+			.form-group
+				label Password
+				input.form-control.my-1(type='password', name='password', required='required')
+			.form-group
+				label Password Confirmation
+				input.form-control.my-1(type='password', name='passwordConfirm', required='required')
+			.form-group
+				label Age
+				input.form-control.my-1(type='number', name='age', value=(kq? kq.age:"") required='required')
+			.form-group
+				label Phone number
+				input.form-control.my-1(type='number', name='phone' value=(kq? kq.Phone:"") )
+			.form-group
+				label Gender
+				select.form-control.my-1(name='gender', value=(kq? kq.gender:"") required='required')
+					option(value='Nam') Nam
+					option(value='Nữ') N&#x1EEF;
+			.form-group
+				label Avatar
+				input#file.imgload.form-control.my-1(type='file', name='avatar', required='required')
+				img.imgshow(src='#', align='left', style='width:50px')
+			.card-footer.d-flex.flex-row-reverse.bg-light
+				button.btn.btn-block.btn-success(type='submit') Add 
+				a.btn.btn-light.bg-white.me-2(href='/') Cancel
+
+

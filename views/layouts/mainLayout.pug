@@ -1,0 +1,75 @@
+doctype html
+html
+  head
+    meta(charset='utf-8')
+    meta(name='viewport', content='width=device-width, initial-scale=1')
+    link(rel='shortcut icon', href = '/img/favicon.ico')
+    link(rel='stylesheet', href='/css/bootstrap.min.css')
+    link(rel='stylesheet', href='/css/all.css')
+    link(rel='stylesheet', href='/css/blogs-style.css')
+    title Blogs Home Page
+  body
+    include headerLayout.pug
+    //- Start main program
+    main
+      //- Start Banner  
+      #myCarousel.carousel.slide(data-bs-ride='carousel')
+        .carousel-indicators
+          button.active(type='button', data-bs-target='#myCarousel', data-bs-slide-to='0', aria-current='true', aria-label='Slide 1')
+          button(type='button', data-bs-target='#myCarousel', data-bs-slide-to='1', aria-label='Slide 2')
+          button(type='button', data-bs-target='#myCarousel', data-bs-slide-to='2', aria-label='Slide 3')
+        .carousel-inner
+          .carousel-item.active
+            svg.bd-placeholder-img(width='100%', height='100%', xmlns='http://www.w3.org/2000/svg', aria-hidden='true', preserveaspectratio='xMidYMid slice', focusable='false')
+              rect(width='100%', height='100%', fill='#A52A2A')
+            .container
+              .carousel-caption.text-start
+                h1 Example headline.
+                p Some representative placeholder content for the first slide of the carousel.
+                p
+                  a.btn.btn-lg.btn-primary(href='#') Sign up today
+          .carousel-item
+            svg.bd-placeholder-img(width='100%', height='100%', xmlns='http://www.w3.org/2000/svg', aria-hidden='true', preserveaspectratio='xMidYMid slice', focusable='false')
+              rect(width='100%', height='100%', fill='#8A2BE2')
+            .container
+              .carousel-caption
+                h1 Another example headline.
+                p Some representative placeholder content for the second slide of the carousel.
+                p
+                  a.btn.btn-lg.btn-primary(href='#') Learn more
+          .carousel-item
+            svg.bd-placeholder-img(width='100%', height='100%', xmlns='http://www.w3.org/2000/svg', aria-hidden='true', preserveaspectratio='xMidYMid slice', focusable='false')
+              rect(width='100%', height='100%', fill='#FF1493')
+            .container
+              .carousel-caption.text-end
+                h1 One more for good measure.
+                p Some representative placeholder content for the third slide of this carousel.
+                p
+                  a.btn.btn-lg.btn-primary(href='#') Browse gallery
+        button.carousel-control-prev(type='button', data-bs-target='#myCarousel', data-bs-slide='prev')
+          span.carousel-control-prev-icon(aria-hidden='true')
+          span.visually-hidden Previous
+        button.carousel-control-next(type='button', data-bs-target='#myCarousel', data-bs-slide='next')
+          span.carousel-control-next-icon(aria-hidden='true')
+          span.visually-hidden Next
+      //- End Banner
+      //- Start Content
+      .container
+        .row
+          .col-9
+            .leftContent.my-4
+              block content       
+          .col-3.bg-success
+            .rightContent
+              include rightContentLayout.pug
+      //- End Content
+    //- End main program
+    include footerLayout.pug  
+    script(src='/js/jquery-3.6.0.min.js')
+    script(src='/js/popper.min.js')
+    script(src='/js/bootstrap.min.js')
+    script(src='/js/moment.min.js')
+    script(src='/ckeditor5-classic/ckeditor.js')
+    script(src='/ckfinder/ckfinder.js')  
+    script(src='/js/blogs-style.js')
+  

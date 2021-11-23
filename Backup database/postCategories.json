@@ -1,0 +1,33 @@
+[{
+  "_id": {
+    "$oid": "617d63f280286bb4a6b208e4"
+  },
+  "article": "Books",
+  "created": {
+    "$date": "2021-10-30T14:23:54Z"
+  }
+},{
+  "_id": {
+    "$oid": "617d641680286bb4a6b208e6"
+  },
+  "article": "News",
+  "created": {
+    "$date": "2021-10-30T14:23:54Z"
+  }
+},{
+  "_id": {
+    "$oid": "617d643380286bb4a6b208e8"
+  },
+  "article": "Travel",
+  "created": {
+    "$date": "2021-10-30T14:23:54Z"
+  }
+},{
+  "_id": {
+    "$oid": "617d645380286bb4a6b208ea"
+  },
+  "article": "Loves",
+  "created": {
+    "$date": "2021-10-30T14:23:54Z"
+  }
+}]
